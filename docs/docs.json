@@ -8,6 +8,13 @@
     "dark": "#404EED"
   },
   "favicon": "/favicon.svg",
+  "openapi": "/api-reference/openapi.json",
+  "api": {
+    "baseUrl": "https://api.someone.xyz",
+    "auth": {
+      "method": "bearer"
+    }
+  },
   "navigation": {
     "tabs": [
       {
@@ -17,7 +24,8 @@
             "group": "Introduction",
             "pages": [
               "introduction",
-              "features"
+              "features",
+              "quickstart"
             ]
           },
           {
@@ -37,13 +45,49 @@
           {
             "group": "Help",
             "pages": [
-              "troubleshooting"
+              "troubleshooting",
+              "development"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "api-reference/introduction"
+            ]
+          },
+          {
+            "group": "Endpoints",
+            "pages": [
+              "api-reference/endpoint/get",
+              "api-reference/endpoint/create",
+              "api-reference/endpoint/delete",
+              "api-reference/endpoint/webhook"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Essentials",
+        "groups": [
+          {
+            "group": "Documentation Guide",
+            "pages": [
+              "essentials/markdown",
+              "essentials/code",
+              "essentials/images",
+              "essentials/navigation",
+              "essentials/reusable-snippets",
+              "essentials/settings"
             ]
           }
         ]
       }
     ]
-    
   },
   "logo": {
     "light": "/logo/light.svg",
@@ -53,7 +97,7 @@
     "links": [],
     "primary": {
       "type": "button",
-      "label": "Connect Your Communities",
+      "label": "Connect Communities",
       "href": "https://discord.com/oauth2/authorize?client_id=1318408868606251030&scope=bot&permissions=533113195584"
     }
   },
