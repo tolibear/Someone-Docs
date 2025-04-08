@@ -1,0 +1,87 @@
+---
+title: 'Context Commands'
+description: 'Special right-click commands for bridged messages'
+---
+
+Someone provides special commands that you can access by right-clicking on messages in bridged channels. These commands help you get more information about bridged messages and the Rooms they belong to.
+
+## Accessing Context Commands
+
+To use a context command:
+
+1. Right-click (or long-press on mobile) on any message in a bridged channel
+2. Look for the **Apps** section in the menu
+3. You'll see commands from the Someone bot
+
+<img src="/images/context-menu.png" alt="Context Menu Example" />
+
+## Get Info Command
+
+The **Get Info** command tells you details about the original message, even if you're looking at a mirrored copy.
+
+### What It Shows
+
+- **Original Sender**: The username and ID of the person who actually sent the message
+- **Original Channel**: Where the message was first posted
+- **Original Timestamp**: When the message was sent
+- **Last Edited**: When the message was last edited (if applicable)
+
+<img src="/images/get-info.png" alt="Get Info Example" />
+
+### When To Use It
+
+- When you want to know who really sent a message (since bridged messages appear from webhooks)
+- When you're unsure if a message is from your channel or a bridged one
+- When you need to know exactly when a message was sent
+
+## Room Info Command
+
+The **Room Info** command shows you details about the bridge Room that your channel belongs to.
+
+### What It Shows
+
+- **Room ID**: The unique identifier for this bridge Room
+- **Host Channel**: Which channel is the "host" of this Room
+- **Connected Channels**: All channels that are part of this Room
+- **Creation Date**: When the Room was first created
+- **Owner**: Who created the Room
+
+<img src="/images/room-info-command.png" alt="Room Info Example" />
+
+### When To Use It
+
+- When you want to see which other channels can see your messages
+- When you need to know who manages the Room (the host channel admins)
+- When you're unsure if a channel is bridged or not
+
+## Mobile Usage
+
+On mobile devices:
+
+1. Long-press on any message
+2. Tap on the "..." menu
+3. Look for the **Apps** section
+4. Select the Someone command you want to use
+
+The information appears in a reply message that only you can see.
+
+## Command Availability
+
+These commands are available to all users in bridged channels - no special permissions required. However:
+
+- You need to be in a channel that's part of a Room to see these commands
+- The commands only appear on messages in bridged channels
+- The bot needs to have permission to respond to application commands
+
+## Using Command Information
+
+The information from these commands can be helpful for:
+
+- **Contacting Users**: If you need to directly contact someone who sent a message from another channel
+- **Understanding Context**: Figuring out where a conversation started
+- **Troubleshooting**: Verifying that bridges are working correctly
+- **Community Awareness**: Knowing which communities you're connected to
+
+## Next Steps
+
+- Check out the [Troubleshooting](/troubleshooting) section if you encounter any issues 

@@ -1,0 +1,97 @@
+---
+title: 'Managing Rooms'
+description: 'How to maintain, modify, and remove bridge connections'
+---
+
+# Managing Bridge Rooms
+
+Once you've [set up your first Room](/admin/setup), you'll need to know how to manage it effectively. This guide covers how to view Room information, add or remove channels, and delete Rooms entirely.
+
+## Viewing Room Information
+
+To see details about a Room and its connected channels:
+
+1. In any channel that's part of a Room, right-click any message
+2. Select **Apps** → **Room Info**
+3. A message will appear showing:
+   - The Room's unique ID
+   - Which channel is the host
+   - All channels currently in the Room
+   - When the Room was created
+
+<img src="/images/room-info.png" alt="Room Information" />
+
+Alternatively, you can use the `/settings` command in any bridged channel to see basic Room information.
+
+## Adding More Channels to a Room
+
+To add more channels to an existing Room:
+
+1. Follow the [Adding Channels](/admin/setup#step-3-add-channels-to-your-room) steps from the setup guide
+2. There's a limit of 10 channels to a single room.
+
+## Removing a Channel from a Room
+
+If you want to disconnect a channel from a Room:
+
+1. Go to the channel you want to remove
+2. Type `/settings`
+3. Click the **Leave Room** button
+4. Confirm your choice
+
+This will immediately stop message mirroring for this channel while preserving the rest of the Room's connections.
+
+## Transferring Room Ownership
+
+Currently, the host channel cannot be changed after a Room is created. If you need to change the host:
+
+1. Create a new Room from your desired host channel
+2. Have all channels leave the old Room and join the new one
+3. Delete the old Room (see below)
+
+## Deleting an Entire Room
+
+To completely remove a Room and disconnect all its channels:
+
+1. Go to the **host channel** of the Room
+2. Type `/settings`
+3. Click the **Leave Room** button
+4. You'll see a special warning that you're about to delete the entire Room
+5. Confirm by clicking **Delete Room**
+
+<img src="/images/delete-room.png" alt="Deleting a Room" />
+
+**Warning**: This action disconnects all channels and permanently deletes the Room (but not the channel). It cannot be undone.
+
+## Managing Join Requests
+
+As the host channel's admin, you'll receive requests when channels from other servers try to join your Room:
+
+1. Go to your host channel
+2. Type `/settings`
+3. Click **View Requests**
+4. For each pending request:
+   - Click **Approve** to add the channel to your Room
+   - Click **Deny** to reject the request
+
+Denied requests can be submitted again after a short waiting period.
+
+## Best Practices
+
+- **Host Selection**: Choose a host channel in a server where you have reliable admin access
+- **Documentation**: After setting up complex bridge networks, document which channels are connected
+- **Permissions**: Regularly verify that the bot still has all needed permissions in connected servers
+- **Maintenance**: Periodically check your Rooms to ensure all channels are still active and relevant
+
+## Troubleshooting
+
+If messages aren't being mirrored properly:
+
+1. Verify the bot has **Manage Webhooks** permission in all connected channels
+2. Check that the channel is still part of the Room using the Room Info command
+3. Make sure the bot hasn't been removed from any of the servers
+4. If issues persist, try removing and re-adding the problematic channel to the Room
+
+## Next Steps
+
+- Learn about [user context commands](/users/context-commands) 

@@ -1,0 +1,96 @@
+---
+title: 'Sending & Receiving Messages'
+description: 'How to use bridged channels as a regular user'
+---
+
+# Sending & Receiving Messages
+
+Using a channel that's connected to a Bridge Room is simple! There's no special syntax or commands to learn - just chat normally, and your messages will automatically appear in all connected channels.
+
+## Message Mirroring
+
+When you send a message in a bridged channel:
+
+1. The Someone bot receives your message
+2. It creates copies in all other channels in the same Room
+3. Each copy appears with your username and avatar
+4. Anyone in those other channels can see and interact with your message
+
+<img src="/images/message-mirroring.png" alt="Message Mirroring Example" />
+
+## Message Types That Work
+
+Most types of Discord messages work seamlessly across bridges:
+
+- **Text Messages**: Plain text, formatted text, and emojis
+- **Attachments**: Images, videos, documents, and other files
+- **Embeds**: Rich content from links (if link wrapping is disabled)
+- **Reactions**: Both standard and custom emoji reactions
+- **Replies**: Replies to messages, including quote content
+- **Stickers & GIFs**: Animated content
+
+## Editing & Deleting Messages
+
+Made a typo? Want to remove a message? No problem:
+
+- **Editing**: When you edit a message, the changes appear in all mirrored copies
+- **Deleting**: When you delete a message, it's removed from all connected channels
+
+This works both ways - if someone edits or deletes a message in another channel, you'll see those changes too.
+
+## Reacting to Messages
+
+Adding reactions works across all bridged channels:
+
+1. Click the reaction button (👍) or right-click a message
+2. Choose your reaction emoji
+3. The reaction appears on all copies of the message in other channels
+4. You can see who added each reaction by hovering over it
+
+<img src="/images/reactions.png" alt="Reactions Example" />
+
+## Replying to Messages
+
+When replying to a message:
+
+1. Hover over or right-click the message you want to reply to
+2. Click the reply button or select "Reply" from the menu
+3. Type your response
+4. Your reply will be mirrored to all channels, including the reply reference
+
+If you're replying to a message from another channel, the "replying to" preview will show who originally sent it.
+
+## User & Role Mentions
+
+When mentioning users or roles:
+
+- **Same Server**: Mentions work normally for users in the same server
+- **Cross-Server**: When mentioning users from other servers, it may appear as plain text depending on the Room's settings
+- **Role Mentions**: These may also be converted to plain text in cross-server scenarios
+
+## Webhook Display
+
+You might notice that messages from other channels appear to be sent by webhook users (with "[BOT]" tags). This is normal - it's how the bridge technology works.
+
+To see who actually sent a message, you can use the [Context Commands](/users/context-commands).
+
+## Tips for Bridge Users
+
+- **Be aware of audiences**: Remember that your messages are visible to people in all connected channels
+- **Context matters**: If discussing something channel-specific, mention which channel you're talking about
+- **Use "Room Info"**: Right-click a message → Apps → Room Info to see which channels are connected
+- **Mention correctly**: When mentioning someone, remember they might be in a different server
+
+## Understanding Source Indicators
+
+If enabled by the Room admin, messages may show where they originated from:
+
+- **Same Server**: Shows as `#channel-name`
+- **Different Server**: Shows as `ServerName > #channel-name`
+
+These indicators help you keep track of where conversations are coming from.
+
+## What's Next
+
+- Learn about [Context Commands](/users/context-commands) for more information about messages
+- Check the [Troubleshooting](/troubleshooting) section if you encounter any issues 

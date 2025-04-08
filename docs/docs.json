@@ -1,0 +1,66 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Someone: Bridge Communities",
+  "colors": {
+    "primary": "#5865F2",
+    "light": "#7289DA",
+    "dark": "#404EED"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Guides",
+        "groups": [
+          {
+            "group": "Introduction",
+            "pages": [
+              "introduction",
+              "features"
+            ]
+          },
+          {
+            "group": "Admin Guide",
+            "pages": [
+              "admin/setup",
+              "admin/managing-rooms"
+            ]
+          },
+          {
+            "group": "User Guide",
+            "pages": [
+              "users/sending-messages",
+              "users/context-commands"
+            ]
+          },
+          {
+            "group": "Help",
+            "pages": [
+              "troubleshooting"
+            ]
+          }
+        ]
+      }
+    ]
+    
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "navbar": {
+    "links": [],
+    "primary": {
+      "type": "button",
+      "label": "Connect Your Communities",
+      "href": "https://discord.com/oauth2/authorize?client_id=1318408868606251030&scope=bot&permissions=533113195584"
+    }
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/your-repo/someone-bot"
+    },
+    "message": "Connect Communities"
+  }
+}

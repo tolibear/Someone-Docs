@@ -1,0 +1,148 @@
+---
+title: 'Troubleshooting'
+description: 'Solutions for common issues with Someone'
+---
+
+# Troubleshooting & FAQ
+
+This guide helps you solve common problems and answers frequently asked questions about the Someone Discord Bridge Bot.
+
+## Message Mirroring Issues
+
+### My message didn't appear in other channels
+
+**Possible causes:**
+1. **Bot permissions**: The bot may not have Manage Webhooks permission in one or more channels
+2. **Channel not bridged**: The channel may not be properly connected to the Room
+3. **Bot offline**: The bot may be temporarily offline or restarting
+
+**Solutions:**
+1. Check if your message appears in some but not all channels
+2. Verify the bot has proper permissions in all channels
+3. Use the Room Info command to confirm channel connections
+4. Try sending another message after a few minutes
+
+### Webhook display names instead of usernames
+
+**Problem**: Messages from other channels show as sent by webhooks ("Someone [BOT]") rather than the original user.
+
+**Explanation**: This is normal behavior. Discord's webhook system is used to replicate messages with the original sender's username and avatar. The webhook is labeled as the bot, but the content shows the correct user.
+
+**Solution**: Use the "Get Info" context command to see who originally sent a message.
+
+## Reactions & Edits
+
+### My reactions don't appear in other channels
+
+**Possible causes:**
+1. **Custom emoji restrictions**: Custom emojis can only be used by members of the server they belong to
+2. **Bot permissions**: The bot may not have Add Reactions permission
+3. **Rate limiting**: Discord may be rate-limiting reactions
+
+**Solutions:**
+1. Try using standard Unicode emojis instead of custom ones
+2. Verify the bot has Add Reactions permission in all channels
+3. Wait a moment and try again
+
+### Message edits or deletes aren't working
+
+**Possible causes:**
+1. **Bot permissions**: The bot may not have Manage Messages permission
+2. **Timing issue**: The edit/delete wasn't synchronized in time
+3. **Connection issue**: Temporary connection problem between servers
+
+**Solution:**
+1. Check if the bot has Manage Messages permission
+2. Try editing or deleting again
+3. If an edit fails, try deleting and resending the message
+
+## Admin & Setup Issues
+
+### Can't join a Room from another server
+
+**Possible causes:**
+1. **Pending approval**: Your request needs approval from the host channel's admin
+2. **Invalid Room ID**: The Room ID you entered is incorrect
+3. **Host server restrictions**: The host server may have restrictions on cross-server connections
+
+**Solutions:**
+1. Contact an admin of the host channel to approve your request
+2. Verify you're using the correct Room ID or channel link
+3. Ensure the bot is in both servers with proper permissions
+
+### Room creation failed
+
+**Possible causes:**
+1. **Missing permissions**: You need Manage Channels permission
+2. **Bot restrictions**: The bot may be limited in the number of Rooms it can create
+3. **Server limit**: The server may have reached its webhook limit
+
+**Solutions:**
+1. Verify you have Manage Channels permission
+2. Try creating the Room in a different channel
+3. Contact your server administrator
+
+## Context Commands
+
+### Context commands aren't appearing
+
+**Possible causes:**
+1. **Channel not bridged**: The channel isn't part of a Room
+2. **Bot permissions**: The bot doesn't have permission to register application commands
+3. **Discord cache**: Discord's UI may not be showing updated commands
+
+**Solutions:**
+1. Verify the channel is part of a Room using `/settings`
+2. Check if the bot has Applications.Commands scope
+3. Refresh Discord (Ctrl+R or Cmd+R)
+4. Try in a different channel that's definitely bridged
+
+### "Get Info" shows incorrect information
+
+**Possible causes:**
+1. **Database sync issue**: The bot's database may be out of sync
+2. **Message caching**: The message data may be cached
+
+**Solutions:**
+1. Try using the command on a different message
+2. Wait a few minutes and try again
+3. If the problem persists, the Room may need to be recreated
+
+## General FAQ
+
+### Why is my message posted by a "webhook user"?
+
+The bot uses Discord webhooks to replicate your message and keep your username/avatar. That's normal and expected behavior. The "Get Info" context command can show who originally sent the message.
+
+### I tried to join a Room, but it says I need approval.
+
+An admin in the host channel must approve your request. Wait for them or ask them to check `/settings` → View Requests.
+
+### My reaction didn't show up.
+
+If the target server doesn't allow custom emojis, or the bot doesn't have permission, it might skip or fail. Standard Unicode emojis usually work fine.
+
+### I want to turn off bridging.
+
+An admin in your channel can run `/settings` → Leave Room to remove that channel, or an admin in the host channel can delete the entire Room.
+
+### Can I bridge more than two channels?
+
+Yes! There's no practical limit to how many channels can be in a single Room. You can bridge dozens of channels if needed.
+
+### Can I see who's in the other channels?
+
+No, the bot doesn't provide a way to see members of other channels. You'll only see the messages they send.
+
+### Can I restrict which messages are bridged?
+
+Currently, all messages in a bridged channel are mirrored. There's no way to select which ones to bridge.
+
+## Still Need Help?
+
+If your issue isn't covered here:
+
+1. Check if the bot is online and functioning in other channels
+2. Ask your server administrator to verify permissions
+3. Join our [support server](https://discord.gg/your-support-server) for direct assistance
+4. Contact us at support@yourdomain.com 

@@ -1,0 +1,79 @@
+---
+title: 'Admin Setup'
+description: 'How to create your first bridge Room'
+---
+
+# Admin Setup Guide
+
+Setting up Someone for your server is straightforward. This guide will walk you through the process of inviting the bot and creating your first bridge Room.
+
+## Prerequisites
+
+Before you begin, make sure you have:
+
+- **Admin or Manage Channels** permission in your Discord server
+- A clear idea of which channel you want to bridge
+- If bridging across servers, you will need to share your channel link with them (and they need to have Someone installed)
+
+## Step 1: Invite the Bot
+
+1. Click the **[Invite Bot](https://discord.com/oauth2/authorize?client_id=1318408868606251030&scope=bot&permissions=533113195584)** button at the top of this page
+2. Select the server you want to add Someone to
+3. Review and approve the requested permissions
+4. Complete the Discord authorization flow
+
+**Required Permissions:**
+- Manage Webhooks (for message mirroring)
+- Send Messages (for bot responses)
+- Read Message History (for context awareness)
+- Use Application Commands (for slash commands)
+- Add Reactions (for reaction mirroring)
+
+## Step 2: Create a Room
+
+A "Room" is the core concept in Someone - it's a group of channels that are all connected together.
+
+1. Choose a channel to be your "host" channel (this is the central channel for your Room)
+2. In that channel, type `/settings`
+3. Click the **Create Room** button in the message that appears
+4. You'll see a confirmation that your Room has been created
+
+<img src="/images/create-room.png" alt="Creating a Room" />
+
+Congratulations! You've created your first Room with this channel as the host.
+
+## Step 3: Add Channels to Your Room
+
+### Adding Channels From Different Servers
+
+1. First, [invite the bot](#step-1-invite-the-bot) to the other server
+2. Go to the channel you want to bridge in that server
+3. Type `/settings`
+4. Click **Join Room**
+5. Paste the channel ID or link of your host channel
+6. A join request is sent to the host channel's server
+
+## Step 4: Approve Join Request
+
+If you're the admin of the host channel and receive join requests from other servers:
+
+1. Go to your host channel
+2. Type `/settings`
+3. Click **View Requests**
+4. For each request, click either **Approve** or **Deny**
+
+<img src="/images/join-requests.png" alt="Managing Join Requests" />
+
+## Testing Your Bridge
+
+Once your channels are connected:
+
+1. Send a test message in any of the connected channels
+2. Verify the message appears in all other channels in the Room
+3. Try editing your message to confirm edits are mirrored
+4. Add a reaction to see if reactions are mirrored
+
+## Next Steps
+
+- [Learn how to manage your Rooms](/admin/managing-rooms)
+- [See the user guide](/users/sending-messages) to understand the user experience 
